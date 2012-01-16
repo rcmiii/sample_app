@@ -1,239 +1,161 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
-
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
-
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
-
-
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
-      }
-
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
-
-
-      #header {
-        background-image: url("images/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
+    <title>BlkNotes - Find Your Point of View</title>
+    <LINK href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/application.js"></script>
   </head>
   <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
-              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
+    <div class="wrapper">
+     <div class="header">
+        <div class="logo"></div>
+        <div class="headerForm">
+        <form id="header_form">
+          <div style="float:left">
+            <input id="location" name="location" type="text" value="enter a location" maxlength="64">
+          </div>
+          <div style="float:left; padding-left:10px;">
+            <input id="venue" name="venue" type="text" value="i.e. Barber Shop, Bar, Club" maxlength="64">
+          </div>
+        </form>
+        </div> 
+        <div class="icon_menu">
+          <div class="header_icon green"><img src="home.png"/><p class="htext">home</p></div>
+          <div class="header_icon"><p class="htext">login</p></div>
+          <div class="header_icon gray"><p class="htext">sign up</p></div>
+          <div class="header_icon green"><img src="review.png"/><p class="htext">review</p></div>
+        </div>
+      </div>
+      <ul class="menu">
+        <a href="mynotes.html"><li>My Notes</li></a>
+        <a href="citynotes.html"><li>City Notes</li></a>
+        <li>Review</li>
+        <li>Q&A</li>
+        <li>Community</li>
+      </ul>
+    <div class="content">
+      <div class="right_content">
+        <div class="call_to_action"><br>
+          Join BlkNotes now!
+          <input type="text" maxlength="60"><input type="submit" value="Join!" action="" placeholder="Your E-mail">
+        </div><br>
+        <div class="ad"><img src="images/banner.jpg" width="300px" height="250px"/></div>
+        Find Something to do!<br>
+        <i style="font-size:15px;">Pick a date or date range!</i>
+        <img src="/images/calendar.png">
+      </div>
+       <div class="main_content">
+        <div class="announcement">Reco for the day...herpa derp</div>
+        <div class="viewer">
+          <div class="img_box">
+			<div class="img_contents current" id="1" style="background:#1F8496; display:block;">Item 1</div>
+			<div class="img_contents" id="2" style="background:#0FCAAF;">Item 2</div>
+			<div class="img_contents" id="3" style="background:#70EEC9;">Item 3</div>
+			<div class="img_contents" id="4" style="background:#FF6E2B;">Item 4</div>
+			<div class="img_contents" id="5" style="background:#90041F;">Item 5</div>
+		  </div>
+          <div class="menu_box">
+          <div style="width:125px; margin:0 0 0 300px;">
+            <ul>
+              <li class="menu_selector opt1 current_menu_box" id="1">&bull;</li>
+              <li class="menu_selector opt2" id="2">&bull;</li>
+              <li class="menu_selector opt3" id="3">&bull;</li>
+              <li class="menu_selector opt4" id="4">&bull;</li>
+              <li class="menu_selector opt5" id="5">&bull;</li>
             </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
+            </div>
+          </div>
         </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove or rename this file</h2>
-              <p>Routes are set up in config/routes.rb.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:migrate</code> to create your database. If you're not using SQLite (the default), edit <code>config/database.yml</code> with your username and password.</p>
-            </li>
-          </ol>
+        <div class="features">
+          <table class="featured_table">
+            <tr class="heading">
+              <td> Featured Salon/Barber</td>
+              <td> Featured Bar</td>
+              <td> Restaurant</td>
+            </tr>
+            <tr class="featured_content">
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            </table><br><br>
+            <table class="featured_table">
+            <tr class="heading">
+              <td> Doctor</td>
+              <td> Gym</td>
+              <td> Staff Pick</td>
+            </tr>
+            <tr class="featured_content">
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
         </div>
       </div>
-
-      <div id="footer">&nbsp;</div>
-    </div>
+    <div class="call_to_action"><br>
+      Join BlkNotes now!
+      <input type="text" maxlength="60"><input type="submit" value="Join!" action="" placeholder="Your E-mail">
+      </div><br>
+    <div class="footer">
+        <table class="footer_table">
+          <tr class="heading">
+            <td>Cities</td>
+            <td>Sections</td>
+            <td>Recommendations</td>
+            <td>About Us</td>
+            <td>Subscribe</td>
+          </tr>
+          <tr class="footer_info">
+            <td>
+              <ul>
+                <li>Chicago</li>
+                <li>New York City</li>
+                <li>Washington, DC</li>
+                <li>Atlanta</li>
+                <li>Los Angeles</li>
+                <li>Houston</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Features</li>
+                <li>CityNotes</li>
+                <li>MyNotes</li>
+                <li>Q & A</li>
+                <li>Search</li>
+              </ul>
+             </td>
+            <td>
+              <ul>
+                <li>Hair</li>
+                <li>Restaurants</li>
+                <li>Bars / Clubs</li>
+                <li>Services</li>
+                <li>Trending</li>
+                <li>Staff Picks</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Philosophy</li>
+                <li>Team</li>
+                <li>Contributers</li>
+                <li>Contact Us</li>
+                <li>Suggest a City</li>
+                <li>Privacy</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Join BlkNotes!</li>
+                <li>Subscribe for our Newsletter</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>  
+  </div>
   </body>
-</html>
+ </html>

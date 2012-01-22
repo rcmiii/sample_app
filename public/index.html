@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <title>BlkNotes - Find Your Point of View</title>
+    <title>blknotes - Find Your Point of View</title>
     <LINK href="/stylesheets/style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="/javascripts/application.js"></script>
@@ -9,22 +9,24 @@
   <body>
     <div class="wrapper">
      <div class="header">
-        <div class="logo"></div>
+        <div class="logo"><img src="/images/logo.png" height="103px" max-width="100%" alt="blknotes" /></div>
         <div class="headerForm">
         <form id="header_form">
           <div style="float:left">
-            <input id="location" name="location" type="text" value="enter a location" maxlength="64">
+            <select>
+          		<option>Choose a location:</option>
+          		<option value="chicago">Chicago</option>
+          	</select>
           </div>
           <div style="float:left; padding-left:10px;">
             <input id="venue" name="venue" type="text" value="i.e. Barber Shop, Bar, Club" maxlength="64">
           </div>
+          <input type="button" class="button green" value="Search" name="Search"/>
         </form>
         </div> 
         <div class="icon_menu">
-          <div class="header_icon green"><img src="home.png"/><p class="htext">home</p></div>
           <div class="header_icon"><p class="htext">login</p></div>
-          <div class="header_icon gray"><p class="htext">sign up</p></div>
-          <div class="header_icon green"><img src="review.png"/><p class="htext">review</p></div>
+          <div class="header_icon"><p class="htext">sign up</p></div>
         </div>
       </div>
       <ul class="menu">
@@ -32,9 +34,8 @@
         <a href="citynotes.html"><li>City Notes</li></a>
         <li>Review</li>
         <li>Q&A</li>
-        <li>Community</li>
       </ul>
-    <div class="content">
+    <div class="content clear">
       <div class="right_content">
         <div class="call_to_action"><br>
           Join BlkNotes now!
@@ -46,7 +47,6 @@
         <img src="/images/calendar.png">
       </div>
        <div class="main_content">
-        <div class="announcement">Reco for the day...herpa derp</div>
         <div class="viewer">
           <div class="img_box">
 			<div class="img_contents current" id="1" style="background:#1F8496; display:block;">Item 1</div>
@@ -94,10 +94,7 @@
           </table>
         </div>
       </div>
-    <div class="call_to_action"><br>
-      Join BlkNotes now!
-      <input type="text" maxlength="60"><input type="submit" value="Join!" action="" placeholder="Your E-mail">
-      </div><br>
+	<br>
     <div class="footer">
         <table class="footer_table">
           <tr class="heading">

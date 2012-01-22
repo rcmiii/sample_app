@@ -1,32 +1,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
-    <title>BlkNotes - Find Your Point of View</title>
+    <title>blknotes - Find Your Point of View</title>
     <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
-    <link href="/stylesheets/plugins/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/plugins/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="/javascripts/application.js"></script>
-    <script type="text/javascript" src="/javascripts/plugins/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript" src="/javascripts/plugins/jquery.fancybox-1.3.4.pack.js"></script>
   </head>
   <body>
     <div class="wrapper">
      <div class="header">
-        <a href="index.html"><div class="logo"></div></a>
+        <a href="index.html"><div class="logo"><img src="/images/logo.png" height="103px" max-width="100%" alt="blknotes" /></div></a>
         <div class="headerForm">
         <form id="header_form">
           <div style="float:left">
-            <input id="location" name="location" type="text" value="enter a location" maxlength="64">
+          	<select>
+          		<option>Choose a location:</option>
+          		<option value="chicago">Chicago</option>
+          	</select>
+            <input id="location" name="location" type="text" value="enter a location" maxlength="64" />
           </div>
           <div style="float:left; padding-left:10px;">
-            <input id="venue" name="venue" type="text" value="i.e. Barber Shop, Bar, Club" maxlength="64">
+            <input id="venue" name="venue" type="text" value="i.e. Barber Shop, Bar, Club" maxlength="64" />
           </div>
         </form>
         </div> 
         <div class="icon_menu">
-          <div class="header_icon green"><img src="home.png"/><p class="htext">home</p></div>
           <div class="header_icon"><p class="htext">login</p></div>
-          <div class="header_icon gray"><p class="htext">sign up</p></div>
-          <div class="header_icon green"><img src="review.png"/><p class="htext">review</p></div>
+          <div class="header_icon"><p class="htext">sign up</p></div>
         </div>
       </div>
       <ul class="menu">
@@ -34,9 +36,8 @@
         <a href="citynotes.html"><li>City Notes</li></a>
         <li>Review</li>
         <li>Q&A</li>
-        <li>Community</li>
       </ul>
-    <div class="content">
+    <div class="content clear">
       <div class="right_content">
         <div class="call_to_action"><br>
           Join BlkNotes now!
@@ -71,14 +72,14 @@
           <div class="listing_description" style="clear:both;">
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           </div>
-          <div class="listing_action green" id="mynotes_add">Add to My Notes</div>
+          <div class="button green" id="mynotes_add">Add to My Notes</div>
           <hr class="solid_gray clear"/>
           <div class="featured_rev">
             <h2>Staff Review</h2>
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           </div>
           <hr class="solid_gray"/>
-          <a id="new_review" href="#review_box"><div class="listing_action green">Write a Review</div></a>
+          <a id="new_review" href="#review_box"><div class="button green">Write a Review</div></a>
           <h2>User Reviews</h2>
           <div id="review_box" style="display:none;"></div>
           <div class="more_reviews clear">

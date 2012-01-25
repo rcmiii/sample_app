@@ -43,6 +43,8 @@ p {
 .gray{
   background-color:#7D7B7C !important;
 }
+
+
 .wrapper{
 	margin: 0 auto;
 	width: 1050px;
@@ -59,32 +61,33 @@ p {
 .headerForm{
   float:left;
   font-size:20px;
-  float:left;
-  padding: 65px 0 0 25px; 
+  margin: 50px 0 0 20px;
 }
 
-.header_icon{
-  position:relative;
-  float: right;
-  width: 55px;
-  height: 100px;
-  cursor: pointer;
+.headerForm select{
+	border: 1px solid #DDD;
+	height: 52px;
+	margin: 0 0 0 -8px;
 }
 
-p.htext{
-  position:absolute;
-  bottom:0;
-  margin: auto;
+.header_action{
+	float:right;
 }
 
-.headerform label{
-  font-size:15px;
-}
 .headerForm input{
   margin: 0 0 0 10px;
+  border: 1px solid #DDD;
+  border-right: none;
+}
+
+input#venue{
+	width: 200px;
+	height: 50px;
+	border: 1px solid #DDD
 }
 
 ul.menu li{
+  color: #FFFFFF;	
   width:187px;
   height:30px;
   float:left;
@@ -108,8 +111,9 @@ ul.menu li{
   border-bottom: 1px solid #000;
 }
 
-ul.menu li:hover{
+ul.menu li:hover, ul.menu li.selected{
   background-color: #DDDDDD;
+  color: #000000;
 }
 li.menu_odd{
   background-color: #777777;
@@ -235,12 +239,14 @@ tr.featured_content td{
   cursor: pointer;
 }
 .button{
-  float:right;
-  width:200px;
+  height: 52px;
+  font-size: 20px;	
+  width:150px;
   color:#FFFFFF;
   font-weight: bold;
   padding:5px 0; 
   cursor: pointer;
+  border: none
 }
 
 hr.solid_gray{
